@@ -66,3 +66,12 @@ body {
 h1 {
   color: #f30;
 }
+
+h2 {
+  color: #f30;
+  text-align: center;
+}
+
+#form {
+  float: center;
+}

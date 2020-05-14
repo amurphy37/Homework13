@@ -12,7 +12,7 @@ router.get("/burgers", function(req, res) {
   //hint: burger.all
   burger.all(function(data) {
     var hbsObject = {
-      burgers: data
+      burger_data: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
