@@ -8,10 +8,14 @@ var burger = {
   },
   create: function(name, cb) {
     //hint:orm.create()
+    orm.create(name, function(res){
+      cb(res);
+    })
   },
   update: function(id, cb) {
-    var condition = "id=" + id;
-    //hint:orm.update
+    orm.update(id, function(res) {
+      cb(res);
+    })
   }
 };
 
