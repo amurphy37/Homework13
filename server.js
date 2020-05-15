@@ -17,7 +17,13 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgersController.js");
 
+function haltOnTimedout(req, res, next) {
+  if (!req.timedout) next();
+}
+
 app.use(routes);
+app.use(timeout(15000));
+app.use(haltOnTimedout);
 
 app.listen(PORT, function() {
   console.log("Listening on port:%s", PORT);
