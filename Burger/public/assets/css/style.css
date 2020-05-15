@@ -52,6 +52,7 @@ body {
   border-color: black;
   border-style: solid;
   border-width: 3px;
+  margin: auto;
 }
 
 .button-size {
@@ -67,7 +68,7 @@ h1 {
   color: #f30;
 }
 
-h2 {
+h3 {
   color: #f30;
   text-align: center;
 }

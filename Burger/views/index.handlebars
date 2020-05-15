@@ -7,8 +7,10 @@
 	</div>
 	<br>
 	<div class="row">
-		<div class="col-md-4 text-center notDevoured"  class="task">
+		<div class="col-md-4 align-left"  class="task">
 			<div class="row">
+				<h3>Burgers:</h3>
+				<br>
 			  {{#each burger_data}}
 			  	{{#unless this.devoured}}
 				<div class="col-md-9 text-center">
@@ -19,7 +21,7 @@
 				<br>
 				<div class="col-md-3 text-center notDevoured">
 					<form class="devour-form button-size">
-						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+						<input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
 						<button type="submit" class="btn btn-default">Devour it!</button>
 					</form>
 				</div>
@@ -27,14 +29,18 @@
 			  {{/each}}
 			</div>
 		</div>
-	</div>
-		<div class="col-md-6 text-center" class="task">
+		<div class="col-md-4"></div>
+	
+		<div class="col-md-4 align-right" class="task">
+			  <h3>Devoured:</h3>
+			  <br>	
 			  {{#each burger_data}}
 			  	{{#if this.devoured}}
 			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
 				{{/if}}
 			  {{/each}}
 		</div>
+	</div>
 </div>
 <br>
 <br>
@@ -50,7 +56,7 @@ hint 2:  <form action="/burgers/create" method="POST">-->
 					<label for="bu">Add Burger (Name):</label>
 				</div>
 			<div>
-			<textarea type="text" name="bu"></textarea>
+			<textarea type="text" id="name" name="bu"></textarea>
 			<button type="submit">Submit</button>
 		</div>
 	</form>
