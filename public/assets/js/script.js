@@ -3,8 +3,7 @@ $(document).ready(function() {
   $(".devour-form").on("submit", function(event) {
     //hint:setting up ajax put
     event.preventDefault();
-
-    var id = $(".burger_id").val()
+    var id = event.currentTarget.getAttribute('data-id')
 
     $.ajax("/api/burgers/" + id, {
       type: "PUT"
